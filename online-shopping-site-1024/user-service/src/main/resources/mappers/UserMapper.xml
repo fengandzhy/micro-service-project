@@ -3,7 +3,7 @@
 <mapper namespace="org.frank.mapper.UserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="org.frank.model.UserDO">
+    <resultMap id="BaseResultMap" type="org.frank.models.UserDO">
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="pwd" property="pwd" />
