@@ -13,7 +13,7 @@ import lombok.EqualsAndHashCode;
  * 电商-公司收发货地址表
  * </p>
  *
- * @author 二当家小D
+ * @author frank
  * @since 2024-04-16
  */
 @Data
