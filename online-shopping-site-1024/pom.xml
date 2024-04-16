@@ -63,6 +63,13 @@
                 <scope>import</scope>
             </dependency>
 
+            <!--mybatis plus和springboot整合-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisplus.boot.starter.version}</version>
+            </dependency>
+
             <!--https://mvnrepository.com/artifact/org.projectlombok/lombok/1.18.16-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
