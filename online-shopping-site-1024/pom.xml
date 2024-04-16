@@ -63,12 +63,19 @@
                 <scope>import</scope>
             </dependency>
 
+            <!--mybatis plus和springboot整合-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisplus.boot.starter.version}</version>
+            </dependency>
+
             <!--https://mvnrepository.com/artifact/org.projectlombok/lombok/1.18.16-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
-                <scope>provided</scope>
+<!--                <scope>provided</scope>-->
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
@@ -94,5 +101,19 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.boot.version}</version>
+                <configuration>
+                    <fork>true</fork>
+                    <addResources>true</addResources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
