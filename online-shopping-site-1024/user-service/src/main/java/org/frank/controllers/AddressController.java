@@ -27,7 +27,7 @@ public class AddressController {
     
     private AddressService addressService;
     
-    @ApiOperation(value = "Find Address Details by ID", tags = "Address Details")
+    @ApiOperation(value = "Find Address Details by ID")
     @GetMapping("/find/{address_id}")
     public Object detail(@ApiParam(value ="Address Id", required = true) 
                              @PathVariable("address_id") Long addressId){

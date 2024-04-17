@@ -20,7 +20,7 @@ public class SwaggerConfiguration {
     @Bean
     public Docket webApiDoc() {
         return new Docket(DocumentationType.OAS_30)
-                .groupName("用户端接口文档")
+                .groupName("user apis document")
                 .pathMapping("/")
                 // 定义是否开启swagger，false为关闭，可以通过变量控制，线上关闭
                 .enable(true)
@@ -36,8 +36,8 @@ public class SwaggerConfiguration {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("1024电商平台")
-                .description("微服务接口文档")
+                .title("1024 online shopping mall")
+                .description("microservice api document")
                 .contact(new Contact("frank", "https://xdclass.net", "794666918@qq.com"))
                 .version("12")
                 .build();
