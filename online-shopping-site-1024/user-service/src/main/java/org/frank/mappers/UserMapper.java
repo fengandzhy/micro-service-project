@@ -1,4 +1,4 @@
-package org.frank.mapppers;
+package org.frank.mappers;
 
 import org.frank.models.UserDO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
