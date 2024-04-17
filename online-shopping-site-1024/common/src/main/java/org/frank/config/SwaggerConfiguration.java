@@ -34,6 +34,23 @@ public class SwaggerConfiguration {
                 .build();
     }
 
+    @Bean
+    public Docket adminApiDoc(){
+        return new Docket(DocumentationType.OAS_30)
+                .groupName("admin apis document")
+                .pathMapping("/")
+                // 定义是否开启swagger，false为关闭，可以通过变量控制，线上关闭
+                .enable(true)
+                //配置api文档元信息
+                .apiInfo(apiInfo())
+                // 选择哪些接口作为swagger的doc发布
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("org.frank"))
+                //正则匹配请求路径，并分配至当前分组
+                .paths(PathSelectors.ant("/admin/**"))
+                .build();
+    }
+
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("1024 online shopping mall")
