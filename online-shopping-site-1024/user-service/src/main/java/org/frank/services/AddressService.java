@@ -4,5 +4,5 @@ import org.frank.models.AddressDO;
 
 public interface AddressService {
     
-    AddressDO detail(int id);
+    AddressDO detail(Long id);
 }
