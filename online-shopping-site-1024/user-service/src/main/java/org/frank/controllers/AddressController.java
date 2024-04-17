@@ -23,11 +23,11 @@ public class AddressController {
     
     private AddressService addressService;
     
-    @GetMapping("find/{address_id}")
+    @GetMapping("/detail/{address_id}")
     public Object detail(@PathVariable("address_id") Long addressId){
         return addressService.detail(addressId);
     }
-
+    
     @Autowired
     public void setAddressService(AddressService addressService) {
         this.addressService = addressService;
