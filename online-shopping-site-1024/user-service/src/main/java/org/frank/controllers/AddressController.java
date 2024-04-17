@@ -23,7 +23,7 @@ public class AddressController {
     
     private AddressService addressService;
     
-    @GetMapping("/detail/{address_id}")
+    @GetMapping("/find/{address_id}")
     public Object detail(@PathVariable("address_id") Long addressId){
         return addressService.detail(addressId);
     }
