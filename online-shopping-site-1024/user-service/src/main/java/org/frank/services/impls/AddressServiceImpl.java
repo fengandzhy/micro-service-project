@@ -1,7 +1,7 @@
 package org.frank.services.impls;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import org.frank.mapppers.AddressMapper;
+import org.frank.mappers.AddressMapper;
 import org.frank.models.AddressDO;
 import org.frank.services.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
