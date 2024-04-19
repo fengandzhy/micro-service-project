@@ -4,7 +4,9 @@ package org.frank.controllers;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import org.frank.models.AddressDO;
 import org.frank.services.AddressService;
+import org.frank.utils.JsonData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,7 +33,8 @@ public class AddressController {
     @GetMapping("/find/{address_id}")
     public Object detail(@ApiParam(value ="Address Id", required = true) 
                              @PathVariable("address_id") Long addressId){
-        return addressService.detail(addressId);
+        AddressDO addressDO = addressService.detail(addressId);
+        return JsonData.buildSuccess(addressDO);
     }
     
     @Autowired
