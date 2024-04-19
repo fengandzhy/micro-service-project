@@ -2,6 +2,7 @@ package org.frank.controllers;
 
 import com.google.code.kaptcha.Producer;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
@@ -23,6 +24,10 @@ public class NotifyController {
     
     private Producer producer;
     
+    /**
+     * 获取图形验证码
+     * */
+    @ApiOperation("create captcha")
     @RequestMapping("captcha")
     public void getCaptcha(@NonNull HttpServletRequest request, 
                            @NonNull HttpServletResponse response){
