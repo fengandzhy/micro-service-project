@@ -34,7 +34,7 @@ public class NotifyController {
         String captcha = producer.createText();
         log.info("captcha is {}",captcha);
         BufferedImage bufferedImage = producer.createImage(captcha);
-        ServletOutputStream outputStream = null;
+        ServletOutputStream outputStream;
         try {
             outputStream = response.getOutputStream();
             ImageIO.write(bufferedImage, "jpg", outputStream);
